@@ -114,13 +114,28 @@ public class AceEditor extends Composite implements RequiresResize, HasText, Tak
 		editor.focus();
 	}-*/;
 	
-	
+	/**
+	 * Set the tabindex of this editor.
+	 * 
+	 * The tabindex attribute specifies the tab order of an element (when
+	 * the "tab" button is used for navigating).
+	 * 
+	 * @param tabIndex
+	 *            Specifies the tabbing order of this editor (1 is first). A
+	 *            negative value remove this editor from the tab order. That is,
+	 *            the editor not be focused while using tab keys to traverse the
+	 *            page.
+	 */
 	public native void setTabIndex(int tabIndex) /*-{
 		var editor = this.@edu.ycp.cs.dh.acegwt.client.ace.AceEditor::editor;
 		editor.textInput.getElement().tabIndex = tabIndex;
 	}-*/;
 	
 	
+	/**
+	 * 
+	 * @return The tabindex of this editor. 
+	 */
 	public native int getTabIndex() /*-{
 		var editor = this.@edu.ycp.cs.dh.acegwt.client.ace.AceEditor::editor;
 		return editor.textInput.getElement().tabIndex;
