@@ -113,6 +113,18 @@ public class AceEditor extends Composite implements RequiresResize, HasText, Tak
 		editor.resize();
 		editor.focus();
 	}-*/;
+	
+	
+	public native void setTabIndex(int tabIndex) /*-{
+		var editor = this.@edu.ycp.cs.dh.acegwt.client.ace.AceEditor::editor;
+		editor.textInput.getElement().tabIndex = tabIndex;
+	}-*/;
+	
+	
+	public native int getTabIndex() /*-{
+		var editor = this.@edu.ycp.cs.dh.acegwt.client.ace.AceEditor::editor;
+		return editor.textInput.getElement().tabIndex;
+	}-*/;
 
 	/**
 	 * Cleans up the entire editor.
